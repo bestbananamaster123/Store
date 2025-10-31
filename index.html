@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Modern Shirt Store</title>
+  <title>Shirtify | Modern Shirt Store</title>
   <style>
     * {
       margin: 0;
@@ -23,6 +23,7 @@
       color: inherit;
     }
 
+    /* Navbar */
     header {
       background-color: #fff;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -40,10 +41,10 @@
       padding: 1rem 2rem;
     }
 
-    .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #111;
+    .logo img {
+      height: 45px;
+      width: auto;
+      display: block;
     }
 
     nav ul {
@@ -52,10 +53,17 @@
       gap: 1.5rem;
     }
 
+    nav ul li a {
+      font-weight: 500;
+      color: #333;
+      transition: color 0.3s;
+    }
+
     nav ul li a:hover {
       color: #0078ff;
     }
 
+    /* Hero */
     .hero {
       background: linear-gradient(to right, #0078ff, #00c6ff);
       color: #fff;
@@ -88,6 +96,7 @@
       border: 1px solid #fff;
     }
 
+    /* Products */
     .products {
       max-width: 1200px;
       margin: 4rem auto;
@@ -155,6 +164,7 @@
       background-color: #005fcc;
     }
 
+    /* Footer */
     footer {
       background-color: #111;
       color: #fff;
@@ -174,7 +184,9 @@
   <!-- Navbar -->
   <header>
     <div class="navbar">
-      <div class="logo">Silly Shirts</div>
+      <a href="https://sillyshirt.pages.dev" class="logo">
+        <img src="https://ibb.co/21ZDR7Wn" alt="Shirtify Logo">
+      </a>
       <nav>
         <ul>
           <li><a href="#">Home</a></li>
@@ -186,14 +198,14 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section class="hero">
     <h1>Modern Shirts for Every Style</h1>
     <p>Upgrade your wardrobe with our premium collection of shirts.</p>
     <a href="https://yourshoplink.com" target="_blank" class="btn-primary">Shop Now</a>
   </section>
 
-  <!-- Products Section -->
+  <!-- Products -->
   <section class="products" id="products">
     <h2 class="section-title">Our Best Sellers</h2>
     <div class="product-grid">
@@ -242,3 +254,4 @@
 
 </body>
 </html>
+
