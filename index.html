@@ -1,22 +1,244 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Merch</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern Shirt Store</title>
   <style>
-    body { font-family:sans-serif; text-align:center; }
-    img { max-width:200px; display:block; margin:10px auto; }
-    button { padding:10px 20px; margin:5px; cursor:pointer; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f8f8f8;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      background-color: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+      padding: 1rem 2rem;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #111;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a:hover {
+      color: #0078ff;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #0078ff, #00c6ff);
+      color: #fff;
+      text-align: center;
+      padding: 6rem 1rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn-primary {
+      background-color: #fff;
+      color: #0078ff;
+      padding: 0.8rem 2rem;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #0078ff;
+      color: #fff;
+      border: 1px solid #fff;
+    }
+
+    .products {
+      max-width: 1200px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      font-weight: bold;
+      color: #111;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .product {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+    }
+
+    .product img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .product-info h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .price {
+      color: #0078ff;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #0078ff;
+      color: #fff;
+      padding: 0.6rem 1.5rem;
+      border-radius: 25px;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #005fcc;
+    }
+
+    footer {
+      background-color: #111;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 4rem;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
   </style>
 </head>
 <body>
-  <h1>My Printify Store</h1>
-  <p>Support me by buying cool merch 👕</p>
 
-  <!-- Example product -->
-  <img src="https://images.printify.com/mockup-example.jpg" alt="T-Shirt">
-  <a href="https://printify.com/app/products/your-product-id" target="_blank">
-    <button>Buy Now</button>
-  </a>
+  <!-- Navbar -->
+  <header>
+    <div class="navbar">
+      <div class="logo">Silly Shirts</div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#products">Shop</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Modern Shirts for Every Style</h1>
+    <p>Upgrade your wardrobe with our premium collection of shirts.</p>
+    <a href="https://yourshoplink.com" target="_blank" class="btn-primary">Shop Now</a>
+  </section>
+
+  <!-- Products Section -->
+  <section class="products" id="products">
+    <h2 class="section-title">Our Best Sellers</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1520975922203-27dba95b4e86?auto=format&fit=crop&w=600&q=60" alt="Classic White Shirt">
+        <div class="product-info">
+          <h3>Classic White Shirt</h3>
+          <p class="price">$35</p>
+          <a href="https://yourproductlink.com/white-shirt" target="_blank" class="btn">Go to Website</a>
+        </div>
+      </div>
+
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1554568218-0f1715e72254?auto=format&fit=crop&w=600&q=60" alt="Denim Shirt">
+        <div class="product-info">
+          <h3>Denim Shirt</h3>
+          <p class="price">$45</p>
+          <a href="https://yourproductlink.com/denim-shirt" target="_blank" class="btn">Go to Website</a>
+        </div>
+      </div>
+
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=600&q=60" alt="Checkered Shirt">
+        <div class="product-info">
+          <h3>Checkered Shirt</h3>
+          <p class="price">$40</p>
+          <a href="https://yourproductlink.com/checkered-shirt" target="_blank" class="btn">Go to Website</a>
+        </div>
+      </div>
+
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1602810318383-e534b4a9e6cb?auto=format&fit=crop&w=600&q=60" alt="Black Formal Shirt">
+        <div class="product-info">
+          <h3>Black Formal Shirt</h3>
+          <p class="price">$50</p>
+          <a href="https://yourproductlink.com/black-formal" target="_blank" class="btn">Go to Website</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Shirtify. All Rights Reserved.</p>
+  </footer>
+
 </body>
 </html>
