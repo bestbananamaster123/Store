@@ -4,7 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Silly Shirts | Store with shirts</title>
+
+  <!-- ✅ Favicon -->
   <link rel="icon" type="image/png" href="https://i.ibb.co/HfMC9nrT/66b3eb6ff0b64c8db0fa10d0-22.png">
+
   <style>
     * {
       margin: 0;
@@ -43,10 +46,17 @@
       padding: 1rem 2rem;
     }
 
+    /* ✅ Bigger logo */
     .logo img {
-      height: 45px;
+      height: 80px;
       width: auto;
       display: block;
+    }
+
+    @media (max-width: 768px) {
+      .logo img {
+        height: 60px;
+      }
     }
 
     nav ul {
