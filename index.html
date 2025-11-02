@@ -4,12 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Silly Shirts | Store with shirts</title>
+  <link rel="icon" type="image/png" href="https://i.ibb.co/HfMC9nrT/66b3eb6ff0b64c8db0fa10d0-22.png">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
     }
 
     body {
@@ -164,6 +166,54 @@
       background-color: #005fcc;
     }
 
+    /* About */
+    .about {
+      max-width: 1000px;
+      margin: 4rem auto;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .about h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #111;
+    }
+
+    .about p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    /* Contact */
+    .contact {
+      background-color: #0078ff;
+      color: #fff;
+      text-align: center;
+      padding: 4rem 1rem;
+    }
+
+    .contact h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact a {
+      display: inline-block;
+      background-color: #fff;
+      color: #0078ff;
+      padding: 0.8rem 2rem;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .contact a:hover {
+      background-color: #0078ff;
+      color: #fff;
+      border: 1px solid #fff;
+    }
+
     /* Footer */
     footer {
       background-color: #111;
@@ -184,25 +234,25 @@
   <!-- Navbar -->
   <header>
     <div class="navbar">
-      <a href="https://sillyshirt.pages.dev" class="logo">
-        <img src="https://i.ibb.co/39RDVy4r/New-Project.png" alt="Shirtify Logo">
+      <a href="#home" class="logo">
+        <img src="https://i.ibb.co/Q31jzbVh/New-Project-1.png" alt="Silly Shirts Logo">
       </a>
       <nav>
         <ul>
-          <li><a href="#">Home</a></li>
+          <li><a href="#home">Home</a></li>
           <li><a href="#products">Shop</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <!-- Hero -->
-  <section class="hero">
+  <section class="hero" id="home">
     <h1>Modern Shirts for Every Style</h1>
     <p>Upgrade your wardrobe with our premium collection of shirts.</p>
-    <a href="https://sillyshirt.pages.dev/#products" target="_blank" class="btn-primary">Shop Now</a>
+    <a href="#products" class="btn-primary">Shop Now</a>
   </section>
 
   <!-- Products -->
@@ -214,7 +264,7 @@
         <div class="product-info">
           <h3>Classic White Shirt</h3>
           <p class="price">$35</p>
-          <a href="https://yourproductlink.com/white-shirt" target="_blank" class="btn">Buy now</a>
+          <a href="#" class="btn">Buy now</a>
         </div>
       </div>
 
@@ -223,7 +273,7 @@
         <div class="product-info">
           <h3>Denim Shirt</h3>
           <p class="price">$45</p>
-          <a href="https://yourproductlink.com/denim-shirt" target="_blank" class="btn">Buy now</a>
+          <a href="#" class="btn">Buy now</a>
         </div>
       </div>
 
@@ -232,7 +282,7 @@
         <div class="product-info">
           <h3>Checkered Shirt</h3>
           <p class="price">$40</p>
-          <a href="https://yourproductlink.com/checkered-shirt" target="_blank" class="btn">Buy now</a>
+          <a href="#" class="btn">Buy now</a>
         </div>
       </div>
 
@@ -241,17 +291,32 @@
         <div class="product-info">
           <h3>Black Formal Shirt</h3>
           <p class="price">$50</p>
-          <a href="https://yourproductlink.com/black-formal" target="_blank" class="btn">Buy now</a>
+          <a href="#" class="btn">Buy now</a>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- About -->
+  <section class="about" id="about">
+    <h2>About Us</h2>
+    <p>
+      Silly Shirts is your go-to brand for premium, modern, and comfortable shirts.  
+      We believe in fun designs, top-quality fabrics, and effortless style that fits every personality.
+    </p>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>Have a question or special request? We’d love to hear from you!</p>
+    <a href="mailto:support@sillyshirts.com">Email Us</a>
+  </section>
+
   <!-- Footer -->
   <footer>
-    <p>© 2025 SillyShirts All Rights Reserved.</p>
+    <p>© 2025 SillyShirts. All Rights Reserved.</p>
   </footer>
 
 </body>
 </html>
-
